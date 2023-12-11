@@ -14,7 +14,7 @@ spec:
     failureLimit: 3
     provider:
       prometheus:
-        address: http://34.93.80.43:9090
+        address: http://34.133.13.54:9090
         query: |
           sum(rate(nginx_ingress_controller_requests{service=~"chart1",status!~"5.*"}[10m])) /
           sum(rate(nginx_ingress_controller_requests{service=~"chart1"}[10m]))
