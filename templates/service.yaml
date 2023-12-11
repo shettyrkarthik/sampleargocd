@@ -1,15 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "chart1.fullname" . }}
-  labels:
-    {{- include "chart1.labels" . | nindent 4 }}
+  name: chart1
 spec:
-  type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: http
-      protocol: TCP
-      name: http
+  - port: 8080
+    targetPort: http
+    protocol: TCP
+    name: http
+  type: LoadBalancer
   selector:
-    {{- include "chart1.selectorLabels" . | nindent 4 }}
+    app: chart1
