@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: chart1
+  name: chart1-canary
 spec:
   ports:
   - port: 8080
