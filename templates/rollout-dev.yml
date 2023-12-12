@@ -11,26 +11,26 @@ spec:
         - templateName: success-rate01
         args:
         - name: service-name
-          value: chart1
+          value: chart2
       canaryService: chart2-canary
       stableService: chart2
       trafficRouting:
         nginx:
-          stableIngress: chart1
+          stableIngress: chart2
       steps:
       - setWeight: 20
       - pause: {duration: 1m}
   revisionHistoryLimit: 2
   selector:
     matchLabels:
-      app: chart1
+      app: chart2
   template:
     metadata:
       labels:
-        app: chart1
+        app: chart2
     spec:
       containers:
-      - name: chart1
+      - name: chart2
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
         ports:
         - name: http
