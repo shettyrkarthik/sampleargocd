@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
-  name: chart1
+  name: chart2
 spec:
   replicas: 5
   strategy:
