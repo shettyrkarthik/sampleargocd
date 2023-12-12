@@ -28,7 +28,7 @@ metadata:
     kubernetes.io/ingress.class: "nginx"
 spec:
   rules:
-    - host: chart2.34.121.11.20.nip.io 
+    - host: chart1.34.121.11.20.nip.io 
       http:
         paths:
           - path: /
