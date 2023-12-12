@@ -13,7 +13,7 @@ spec:
         - name: service-name
           value: chart1
       canaryService: chart1-canary
-      stableService: chart1
+      stableService: chart2
       trafficRouting:
         nginx:
           stableIngress: chart1
