@@ -16,7 +16,7 @@ spec:
       stableService: chart2
       trafficRouting:
         nginx:
-          stableIngress: chart1
+          stableIngress: chart2
       steps:
       - setWeight: 20
       - pause: {duration: 1m}
