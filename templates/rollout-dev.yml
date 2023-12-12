@@ -12,7 +12,7 @@ spec:
         args:
         - name: service-name
           value: chart1
-      canaryService: chart1-canary
+      canaryService: chart2-canary
       stableService: chart2
       trafficRouting:
         nginx:
